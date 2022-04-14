@@ -1,0 +1,101 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            Random randomIndex = new Random();
+
+            int damageDone;
+            int enemy = 100;
+            int Sword = randomIndex.Next(1, 100);
+            int Bow = randomIndex.Next(1, 100);
+
+            int Sword2 = randomIndex.Next(1, 100);
+            int Bow2 = randomIndex.Next(1, 100);
+
+            int user1 = 1;
+            
+
+            Console.WriteLine("An enemy has infiltrated Our land. Please choose a weapon: Sword or Bow. Use 1 or 2 to choose.");
+            int Weapon = Convert.ToInt32(Console.ReadLine());
+
+            if (Weapon == user1)
+            {
+                Console.WriteLine("You have chosen the sword");
+            }
+
+            else
+            {
+                Console.WriteLine("You have chosen the bow");
+            }
+
+            Console.ReadLine();
+
+            Console.WriteLine("Now attack! Press enter to attack.");
+
+            Console.ReadLine();
+
+            if (Weapon == user1)
+            {
+                Console.WriteLine("You attack with the Sword and have done " + Sword + " Damage");
+            }
+
+            else
+            {
+                Console.WriteLine("You attack with the Bow and have done " + Bow + " Damage"); 
+            }
+
+            
+                if (Weapon == user1)
+                {
+                    damageDone = Sword;
+                }
+            
+            else damageDone = Bow;
+
+
+            enemy = enemy - damageDone;
+
+
+            Console.ReadLine();
+
+            Console.WriteLine("The enemy is stunned! Attack again.");
+
+            Console.ReadLine();
+            
+            if (Weapon == user1)
+            {
+                Console.WriteLine("You attack with the Sword and have done " + Sword2 + " Damage");
+            }
+
+            else
+            {
+                Console.WriteLine("You attack with the Bow and have done " + Bow2 + " Damage");
+            }
+
+
+            if (Weapon == user1)
+            {
+                damageDone = Sword2;
+            }
+
+            else damageDone = Bow2;
+
+
+            enemy = enemy - damageDone;
+
+            Console.ReadLine();
+
+             if (enemy <= damageDone)
+            {
+                Console.WriteLine("You have defeated the enemy! You will be rewarded.");
+            }
+            else
+            {
+                Console.WriteLine("The enemy is not defeated. Attack again!");
+            }
+            Console.ReadLine();
+        }
+
+
+    }
+}
